@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: unset;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label{
+    color: $main-color;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple{
+    background-color: $main-color;
+}
+
+::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+    color: $main-color;
+} 
+
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: $main-color;
+}
+
+.property-filter-container {
+    display: flex;
+    justify-content: center;
+}
+
+.filter {
+    margin: $large-spacing;
+}

@@ -1,0 +1,72 @@
+<section class="propety-list-container">
+    <mat-spinner *ngIf="isLoading" class="loader" [diameter]="50"></mat-spinner>
+
+    <table mat-table *ngIf="!isLoading" [dataSource]="dataSource">
+
+        <ng-container matColumnDef="created">
+            <th mat-header-cell *matHeaderCellDef> Created </th>
+            <td mat-cell *matCellDef="let property"> {{property.createdOn | date:'shortDate'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="property">
+            <th mat-header-cell *matHeaderCellDef> Property </th>
+            <td mat-cell *matCellDef="let property"> 
+                <button (click)="openDialog('property', property)">
+                    {{property.address}}
+                </button> 
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="propertyStatus">
+            <th mat-header-cell *matHeaderCellDef> Property Status </th>
+            <td mat-cell *matCellDef="let property" class="status" [class]="property.occupiedStats">
+                {{property.occupiedStats}} 
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="plan">
+            <th mat-header-cell *matHeaderCellDef> Plan </th>
+            <td mat-cell *matCellDef="let property"> {{property.plan}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="owner">
+            <th mat-header-cell *matHeaderCellDef> Owner </th>
+            <td mat-cell *matCellDef="let property"> 
+                <button (click)="openDialog('owner', property)">
+                    {{property.owner}} 
+                </button>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ownerStatus">
+            <th mat-header-cell *matHeaderCellDef> Owner Status </th>
+            <td mat-cell *matCellDef="let property" class="status" [class]="property.ownerStatus"> 
+                {{property.ownerStatus}} 
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tenant">
+            <th mat-header-cell *matHeaderCellDef> Tenant </th>
+            <td mat-cell *matCellDef="let property"> 
+                <button (click)="openDialog('tenant', property)">
+                    <span>{{property.tenant?.firstName}}</span>
+                    <span *ngIf="property.tenant?.lastName">
+                        {{property.tenant?.lastName}}
+                    </span>
+                </button>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tenantStatus">
+            <th mat-header-cell *matHeaderCellDef> Tenant Status </th>
+            <td mat-cell *matCellDef="let property" class="status" [class]="property.tenant?.tenantStatus"> 
+                {{property.tenant?.tenantStatus}} 
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [ngClass]="{'hidden': isLoading}" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="paginator-container"></mat-paginator>
+</section>

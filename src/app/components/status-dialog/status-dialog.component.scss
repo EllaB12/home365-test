@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+button {
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    border-radius: 25px;
+    color: $white;
+    cursor: pointer;
+    font-size: $large-font-size;
+    padding: $small-spacing $large-spacing;
+    width: 90px;
+}
+
+.topic-title {
+    text-transform: capitalize;
+}
+
+.close-btn {
+    display: flex;
+    justify-content: center;
+}

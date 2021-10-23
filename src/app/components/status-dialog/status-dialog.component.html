@@ -1,0 +1,13 @@
+<section class="status-dialog-container">
+  <h1 mat-dialog-title class="topic-title">
+    {{data.topic}} Status
+  </h1>
+  <div mat-dialog-content>
+      <div>{{content}}</div>
+      <div class="status" [class]="status">{{status}}</div>
+  </div>
+  <div mat-dialog-actions class="close-btn">
+    <button mat-button (click)="onCloseClick()">Got it</button>
+  </div>
+</section>
+

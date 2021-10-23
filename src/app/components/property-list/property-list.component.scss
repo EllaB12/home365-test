@@ -1,0 +1,37 @@
+@import '../../styles/variables.scss';
+
+.loader {
+    margin: $huge-spacing auto;
+}
+
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: $main-color;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+}
+
+button {
+    color: $link-color;
+    cursor: pointer;
+    font-size: $base-font-size;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.mat-cell,
+.mat-header-cell {
+    font-size: $base-font-size;
+    padding: $small-spacing;
+}
+
+.paginator-container {
+    padding: 0 40px;
+}
+
+.hidden {
+    display: none;
+}
+

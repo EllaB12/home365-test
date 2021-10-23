@@ -1,0 +1,21 @@
+<section class="property-filter-container">
+    <mat-form-field appearance="fill" class="filter">
+        <mat-label>Property Status</mat-label>
+        <mat-select (selectionChange)="setFilter($event.value, 'property')">
+            <mat-option value="all">All</mat-option>
+            <mat-option value="active">Active</mat-option>
+            <mat-option value="occupied">Occupied</mat-option>
+            <mat-option value="vacant">Vacant</mat-option>
+            <mat-option value="inactive">Inactive</mat-option>
+        </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill" class="filter">
+            <mat-label>Tenant Status</mat-label>
+            <mat-select (selectionChange)="setFilter($event.value, 'tenant')">
+                <mat-option value="all">All</mat-option>
+                <mat-option value="active">Active</mat-option>
+                <mat-option value="inactive">Inactive</mat-option>
+            </mat-select>
+        </mat-form-field>
+</section>
