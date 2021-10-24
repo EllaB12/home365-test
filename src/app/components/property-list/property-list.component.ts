@@ -53,7 +53,7 @@ export class PropertyListComponent implements OnInit {
 
   openDialog(topic: string, property: any): void {
     this.dialog.open(StatusDialogComponent, {
-      width: '300px',
+      width: '400px',
       data: {topic, property}
     });
   }

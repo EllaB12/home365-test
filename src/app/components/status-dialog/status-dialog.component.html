@@ -3,6 +3,9 @@
     {{data.topic}} Status
   </h1>
   <div mat-dialog-content>
+      <div class="property-icon-container">
+        <img class="property-icon" src="assets/svg/property-icon.svg">
+      </div>
       <div>{{content}}</div>
       <div class="status" [class]="status">{{status}}</div>
   </div>
@@ -10,4 +13,3 @@
     <button mat-button (click)="onCloseClick()">Got it</button>
   </div>
 </section>
-

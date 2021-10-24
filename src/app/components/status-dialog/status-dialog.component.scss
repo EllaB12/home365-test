@@ -13,6 +13,23 @@ button {
 
 .topic-title {
     text-transform: capitalize;
+    text-align: center;
+    margin: 0 0 $small-spacing;
+}
+
+.status {
+    margin-top: $small-spacing;
+}
+
+.property-icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $small-spacing;
+
+    .property-icon {
+        transform: rotate(15deg);
+        width: 70px;
+    }
 }
 
 .close-btn {

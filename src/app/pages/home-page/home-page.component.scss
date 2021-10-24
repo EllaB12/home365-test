@@ -11,7 +11,29 @@
     span {
         color: $main-color;
     }
+
+    .wifi-icon {
+        width: 30px;
+        position: relative;
+        right: 44px;
+        top: 17px;
+        animation: updown 4s ease infinite;
+    }
 }
+
+@keyframes updown {
+    0% {
+      transform: translateY(-10%);
+    }
+  
+    50% {
+      transform: translateY(10%);
+    }
+  
+    100% {
+      transform: translateY(-10%);
+    }
+  }
 
 .home-page-subtitle {
     color: $subtitle-color;
