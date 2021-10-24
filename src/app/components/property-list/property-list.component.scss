@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .loader {
-    margin: $huge-spacing auto;
+    margin: $large-spacing auto;
 }
 
 ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
@@ -28,7 +28,7 @@ button {
 }
 
 .paginator-container {
-    padding: 0 40px;
+    padding: 0 $huge-spacing;
 }
 
 .hidden {
